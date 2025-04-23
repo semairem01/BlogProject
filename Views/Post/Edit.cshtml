@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Tittle"] = "Edit Post";
+}
+
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model BlogProject.Models.Services.ViewModels.EditPostViewModel
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+    <h2>Create Post</h2>
+
+    <form asp-action="Edit" method="post"  asp-controller="Post" enctype="multipart/form-data">
+
+        <input type="hidden" asp-for="Id"/>
+        
+        <div class="mb-3">
+            <label asp-for="CategoryId" class="form-label"></label>
+            <select class="form-select" asp-for="CategoryId" asp-items="Model.CategoryList">
+                <option value="">Choose the category</option>
+
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+            
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label"></label>
+            <input asp-for="Title" class="form-control"/>
+
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Content" class="form-label"></label>
+            <input asp-for="Content" class="form-control"/>
+            <span asp-validation-for="Content" class="text-danger"></span>
+        </div>
+            
+        <div class="mb-3">
+            <label asp-for="ImageFile" class="form-label"></label>
+            <input asp-for="ImageFile" class="form-control"></input>
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+            
+        <div class="mb-3">
+            <input type="submit" value="Update" class="btn btn-primary"/>
+        </div>
+    </form>
+    </div>
+</div>

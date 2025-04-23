@@ -1,0 +1,51 @@
+﻿@using BlogProject.Models.Services.ViewModels
+@{
+    ViewData["Tittle"] = "Create Post";
+}
+
+@model CreatePostViewModel
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+    <h2>Create Post</h2>
+
+    <form asp-action="Create" method="post"  asp-controller="Post" enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label asp-for="CategoryId" class="form-label"></label>
+            <select class="form-select" asp-for="CategoryId" asp-items="Model.CategoryList">
+                <option value="">Choose the category</option>
+
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+            
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label"></label>
+            <input asp-for="Title" class="form-control"/>
+
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Content" class="form-label"></label>
+            <input asp-for="Content" class="form-control"/>
+            <span asp-validation-for="Content" class="text-danger"></span>
+        </div>
+            
+        <div class="mb-3">
+            <label asp-for="ImageFile" class="form-label"></label>
+            <input asp-for="ImageFile" type="file" class="form-control"></input>
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+            
+        <div class="mb-3">
+            <input type="submit" value="Create" class="btn btn-primary"/>
+        </div>
+    </form>
+</div>
+</div>

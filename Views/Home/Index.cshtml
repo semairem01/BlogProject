@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<BlogProject.Models.Repositories.Category>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h2>Welcome @User.Identity.Name :)</h2>
+    }
+    else
+    {
+        <h2>Welcome!</h2>
+    }
+</div>
+
+<div class="categories">
+    <h2>Categories</h2>
+    <ul>
+        @foreach (var category in Model)
+        {
+            <li>
+                <a href="@Url.Action("PostsByCategory", "Home", new { categoryId = category.Id })">
+                    @category.Name
+                </a>
+            </li>
+        }
+    </ul>
+</div>

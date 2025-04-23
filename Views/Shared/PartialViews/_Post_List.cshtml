@@ -1,0 +1,55 @@
+﻿@using BlogProject.Models.Repositories.Entities
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<BlogProject.Models.Services.ViewModels.PostViewModel>
+@inject UserManager<AppUser> UserManager
+
+<div class="col-md-8 offset-md-2">
+    <a asp-action="Create" asp-controller="Post" class="btn btn-primary">Create New Post</a>
+    <h2>Post List</h2>
+
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Post Title</th>
+            <th>Post Content</th>
+            <th>Post Publish Date</th>
+            <th>Image</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td>@post.Title</td>
+                <td>@post.Content</td>
+                <td>@post.PublishDate</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(post.Image))
+                    {
+                        <img src="@post.Image" alt="Post Image" width="100" />
+                    }
+                </td>
+                <td>@post.CategoryName</td>
+                <td>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        var currentUserId = UserManager.GetUserId(User);
+
+                        if (!string.IsNullOrEmpty(currentUserId) &&
+                            Guid.TryParse(currentUserId, out var currentUserGuid) &&
+                            post.UserId == currentUserGuid)
+                        {
+                            <a asp-controller="Post" asp-action="Edit" asp-route-id="@post.Id" class="btn btn-primary">Edit</a>
+                            <a asp-controller="Post" asp-action="Delete" asp-route-id="@post.Id" class="btn btn-danger">Delete</a>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

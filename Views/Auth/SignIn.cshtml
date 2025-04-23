@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "SignIn";
+}
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model BlogProject.Models.Services.ViewModels.SignInViewModel
+
+<div class="login-container">
+    <div class="login-left">
+        <div class="overlay-box">
+        <h1>Yummy Days</h1>
+        <p>Made with love, served with a smile ❤️ Join us in the kitchen, where every meal is a memory!</p>
+        </div>
+    </div>
+    
+    <div class="login-right">
+        <h1>Sign In</h1>
+        <p>Sign in and enjoy your meal !</p>
+    <div asp-validation-summary="ModelOnly"></div>
+        <form asp-action="SignIn" method="post" asp-controller="Auth">
+
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control"/>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" type="password"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+        <p>Does not have account yet? <a href="/Auth/CreateUser">Register</a></p>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+}
+</div>
+        
+    
+       
+    
+            
