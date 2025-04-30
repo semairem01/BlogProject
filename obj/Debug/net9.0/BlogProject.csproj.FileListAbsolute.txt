@@ -341,3 +341,5 @@ C:\Users\semai\RiderProjects\BlogProject\BlogProject\bin\Debug\net9.0\Microsoft.
 C:\Users\semai\RiderProjects\BlogProject\BlogProject\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\semai\RiderProjects\BlogProject\BlogProject\obj\Debug\net9.0\compressed\w8zhls6qhv-2w067vgbxt.gz
 C:\Users\semai\RiderProjects\BlogProject\BlogProject\obj\Debug\net9.0\compressed\mdetsvep89-uc6ubzrz8z.gz
+C:\Users\semai\RiderProjects\BlogProject\BlogProject\obj\Debug\net9.0\BlogProject.sourcelink.json
+C:\Users\semai\RiderProjects\BlogProject\BlogProject\obj\Debug\net9.0\compressed\4p4yfshq6m-fi3om6lhsi.gz

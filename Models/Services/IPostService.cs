@@ -21,5 +21,6 @@ public interface IPostService
     
     bool CanCurrentUserDelete(int postId, string? email);
     List<PostViewModel> GetAllPostsByCategory(int categoryId);
+    List<PostViewModel> GetByCategoryId(int categoryId);
 
 }

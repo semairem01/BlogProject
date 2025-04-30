@@ -67,6 +67,24 @@ public class PostService : IPostService
 
         return postViewModelList;
     }
+    
+    public List<PostViewModel> GetByCategoryId(int categoryId)
+    {
+        var posts = _postRepository.GetAll()
+            .Where(p => p.CategoryId == categoryId)
+            .ToList();
+
+        return posts.Select(p => new PostViewModel
+        {
+            Id = p.Id,
+            Title = p.Title,
+            Content = p.Content,
+            PublishDate = p.PublishDate,
+            Image = p.Image,
+            CategoryName = p.Category?.Name ?? "",
+            UserId = p.UserId
+        }).ToList();
+    }
 
     public CreatePostViewModel CreateViewModel()
     {
@@ -167,6 +185,12 @@ public class PostService : IPostService
         Console.WriteLine($"Post.UserId: {post?.UserId}");
         if (post == null || string.IsNullOrEmpty(currentUserId)) return false;
 
+        var currentUser = _httpContextAccessor.HttpContext.User;
+        if (currentUser.IsInRole("Admin"))
+        {
+            return true; // Admin kullanıcı her gönderiyi silebilir
+        }
+        
         if (!Guid.TryParse(currentUserId, out var userGuid))
         {
             Console.WriteLine("currentUserId is not a valid Guid.");

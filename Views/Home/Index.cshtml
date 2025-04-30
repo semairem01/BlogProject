@@ -1,29 +1,47 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@model List<BlogProject.Models.Repositories.Category>
+
+@model IEnumerable<BlogProject.Models.Repositories.Category>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
     @if (User.Identity.IsAuthenticated)
     {
-        <h2>Welcome @User.Identity.Name :)</h2>
+        <h1>Welcome @User.Identity.Name :)</h1>
     }
     else
     {
-        <h2>Welcome!</h2>
+        <h1>Welcome!</h1>
     }
 </div>
 
-<div class="categories">
-    <h2>Categories</h2>
-    <ul>
+@{
+    var imagePaths = new List<string>
+    {
+        "/images/dessert.jpg",
+        "/images/salad.jpg",
+        "/images/soup.jpg",
+        "/images/pasta.jpg"
+        // Kategori sayın kadar görsel ekle
+    };
+
+    var index = 0;
+}
+
+<div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
         @foreach (var category in Model)
         {
-            <li>
-                <a href="@Url.Action("PostsByCategory", "Home", new { categoryId = category.Id })">
-                    @category.Name
+            <div class="col">
+                <a asp-controller="Post" asp-action="ByCategory" asp-route-id="@category.Id">
+                <div class="category-card">
+                    <img src="@imagePaths[index]" alt="@category.Name"/>
+                    <div class="overlay-text">
+                        @category.Name
+                    </div>
+                </div>
                 </a>
-            </li>
+            </div>
+            index++;
         }
-    </ul>
+    </div>
 </div>

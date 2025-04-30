@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\create.post.css"
     },
     {
+      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\css\\home.page.css",
+      "PackagePath": "staticwebassets\\css\\home.page.css"
+    },
+    {
       "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -23,10 +27,6 @@
     {
       "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\272815da-2741-49bf-82ce-5b9876490eab.jpg",
       "PackagePath": "staticwebassets\\images\\272815da-2741-49bf-82ce-5b9876490eab.jpg"
-    },
-    {
-      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\4d4f5271-bad9-4e70-b290-e713a46f75e3.jpg",
-      "PackagePath": "staticwebassets\\images\\4d4f5271-bad9-4e70-b290-e713a46f75e3.jpg"
     },
     {
       "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\5fa7fe06-9fd5-4175-af29-5a8d4139e58b.jpg",
@@ -41,18 +41,6 @@
       "PackagePath": "staticwebassets\\images\\75dc7359-c47f-479f-9ec8-8b6c0a0982c1.jpg"
     },
     {
-      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\78bf9f6d-7cf8-46c7-afe2-5bcdf4bbdaea.jpg",
-      "PackagePath": "staticwebassets\\images\\78bf9f6d-7cf8-46c7-afe2-5bcdf4bbdaea.jpg"
-    },
-    {
-      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\9285ec24-0251-4bbb-aeb3-6c8773ce9f77.jpg",
-      "PackagePath": "staticwebassets\\images\\9285ec24-0251-4bbb-aeb3-6c8773ce9f77.jpg"
-    },
-    {
-      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\96ffa3c8-3cf2-46e2-bf7e-1dacb2b2e763.jpg",
-      "PackagePath": "staticwebassets\\images\\96ffa3c8-3cf2-46e2-bf7e-1dacb2b2e763.jpg"
-    },
-    {
       "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\a0786820-a0d2-40dc-89c4-2c6f6d8e2325.jpg",
       "PackagePath": "staticwebassets\\images\\a0786820-a0d2-40dc-89c4-2c6f6d8e2325.jpg"
     },
@@ -65,8 +53,20 @@
       "PackagePath": "staticwebassets\\images\\d79690cb-e20c-4fee-8fd2-6deaed034ee6.jpg"
     },
     {
-      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\df0453f8-7295-49c3-a3b8-8ec822b369e9.png",
-      "PackagePath": "staticwebassets\\images\\df0453f8-7295-49c3-a3b8-8ec822b369e9.png"
+      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\dessert.jpg",
+      "PackagePath": "staticwebassets\\images\\dessert.jpg"
+    },
+    {
+      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\pasta.jpg",
+      "PackagePath": "staticwebassets\\images\\pasta.jpg"
+    },
+    {
+      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\salad.jpg",
+      "PackagePath": "staticwebassets\\images\\salad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\images\\soup.jpg",
+      "PackagePath": "staticwebassets\\images\\soup.jpg"
     },
     {
       "Id": "C:\\Users\\semai\\RiderProjects\\BlogProject\\BlogProject\\wwwroot\\js\\site.js",

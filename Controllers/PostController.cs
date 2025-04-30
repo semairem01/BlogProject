@@ -105,4 +105,11 @@ public class PostController(IPostService postService) : Controller
         postService.Update(editPostViewModel);
         return RedirectToAction("Index");
     }
+
+    public IActionResult ByCategory(int id)
+    {
+        var filteredPosts = postService.GetByCategoryId(id);
+        ViewBag.postList = filteredPosts;
+        return View("Index",filteredPosts);
+    }
 }
